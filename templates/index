@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload CSV and Process PDF</title>
+</head>
+<body>
+    <h2>Upload PDF, Select Bank, and Provide PDF Password (if required)</h2>
+    <form method="POST" action="/upload" enctype="multipart/form-data">
+        <label for="csv_file">Upload bank statement:</label>
+        <input type="file" id="csv_file" name="csv_file" accept=".pdf" required><br><br>
+
+        <label for="bank_name">Select Bank:</label>
+        <select id="bank_name" name="bank_name" required>
+            <option value="">Select a Bank</option>
+            <option value="hdfc">HDFC Bank</option>
+            <option value="au">AU Bank</option>
+            <option value="kotak">Kotak Bank</option>
+            <!-- Add more bank options here -->
+        </select><br><br>
+
+        <label for="pdf_password">PDF Password (if any):</label>
+        <input type="password" id="pdf_password" name="pdf_password" placeholder="Enter PDF password"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
